@@ -1,6 +1,6 @@
 from datetime import date
-
 from kolegij import get_kolegij
+from utilities import unos_intervala
 
 def unos_ispita(kolegiji, redni_broj):
     ispit = {}
@@ -9,8 +9,9 @@ def unos_ispita(kolegiji, redni_broj):
     for i, kolegij in enumerate(kolegiji, start=1):
         print(get_kolegij(i, kolegij))
 
-    odabrani_kolegij = int(input('Unesite kolegij: '))
-
+    x = len(kolegij)
+    print('Za odabir kolegija')
+    odabrani_kolegij = unos_intervala(1, x)
     ispit['kolegij'] = kolegiji[odabrani_kolegij -1]
 
     dan  = int(input(f'Unesite dan {redni_broj}. ispita: '))
