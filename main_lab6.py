@@ -25,8 +25,6 @@ while running:
         #len je broj stvari u polju kolegij
         kolegiji.append(unos_kolegija(len(kolegiji)+1))
 
-
-
     elif akcija == 2:
         ispiti.append(unos_ispita(kolegiji, len(ispiti)+1))
 
